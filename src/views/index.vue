@@ -344,6 +344,7 @@
 					notNextTick: true,
 					autoplay: true,
 					preloadImages: false,
+					spaceBetween: 4,
 					pagination: {
 						el: '#swiperP01',
 						clickable: true
@@ -361,6 +362,7 @@
 					notNextTick: true,
 					autoplay: true,
 					preloadImages: false,
+					spaceBetween: 4,
 					pagination: {
 						el: '#swiperP011',
 						clickable: true
@@ -378,6 +380,7 @@
 					notNextTick: true,
 					autoplay: true,
 					preloadImages: false,
+					spaceBetween: 4,
 					slidesPerView: 2,
 					slidesPerGroup: 2,
 					loopFillGroupWithBlank: true,
@@ -396,6 +399,7 @@
 					preloadImages: false,
 					slidesPerView: 2,
 					slidesPerGroup: 2,
+					spaceBetween: 4,
 					loopFillGroupWithBlank: true,
 					pagination: {
 						el: '#swiperP022',

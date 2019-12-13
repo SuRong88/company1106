@@ -25,7 +25,7 @@ Vue.config.productionTip = false;
 Vue.filter('formatDate', formatDate);
 // 未登录 所有允许进入的页面
 var allowPages = ['/index', '/login', '/register', '/register-success', '/bind', '/forget', '/reset', '/detail', '/404',
-	'/sale', '/case', '/adviser', '/purchase', '/company_purchase_info','/result','/openInBrowser', '/pay-success', '/pay-fail', '/tip', '/buy'
+	'/sale', '/case', '/adviser', '/purchase', '/company_purchase_info','/result','/open-in-browser', '/pay-success', '/pay-fail', '/tip', '/buy'
 ,'bind-fail','bind-success'];
 router.beforeEach((to, from, next) => {
 	var login = localStorage.getItem('company');
