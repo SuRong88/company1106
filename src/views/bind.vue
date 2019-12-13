@@ -184,7 +184,7 @@
 				// 所有企业类型Arr
 				businesses: [],
 				// 二维码地址
-				codeUrl: 'http://dz25.mrxdtech.com/api/api/wx_account/qrcode_img?kinds=reg&language=cn'
+				codeUrl: ''
 			};
 		},
 		watch: {
@@ -381,8 +381,12 @@
 			}
 		},
 		created() {
+            let language = localStorage.getItem('language')||'cn'
 			if (window.screen.width > 750) {
 				this.mobile = false;
+            	this.codeUrl = "http://www.gcsgou.com/api/api/wx_account/qrcode_img?kinds=reg&device=pc&language="+language
+			} else{
+				this.codeUrl = "http://www.gcsgou.com/api/api/wx_account/qrcode_img?kinds=reg&device=mobile&language="+language
 			}
 			this.getCountry();
 			this.getIndustry();

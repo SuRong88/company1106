@@ -179,6 +179,7 @@
 					speed: 900,
 					notNextTick: true,
 					autoplay: true,
+                    spaceBetween:5,
 					preloadImages: false,
 					pagination: {
 						el: '#swiperP'

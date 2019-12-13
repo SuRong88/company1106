@@ -1,6 +1,6 @@
 // 本地模式
-var ISLOCAL = 0
-var BASEURL = ISLOCAL ? '/api' : 'http://www.gcsgou.com/api/api'
+var ISLOCAL = 0;
+var BASEURL = ISLOCAL ? '/api' : 'http://www.gcsgou.com/api/api';
 window.urls = {
 	// 4.买卖类
 	// 公司列表
@@ -87,4 +87,4 @@ window.urls = {
 	instruction: BASEURL + '/instruction',
 	// 微信sdk 
 	wxsdk: BASEURL + '/wx/sdk',
-}
+};

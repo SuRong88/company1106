@@ -85,6 +85,16 @@ export default new Router({
 				component: resolve => require(['views/buy.vue'], resolve)
 			},
 			{
+				name: 'bind-success',
+				path: 'bind-success',
+				component: resolve => require(['views/bind-success.vue'], resolve)
+			},
+			{
+				name: 'bind-fail',
+				path: 'bind-fail',
+				component: resolve => require(['views/bind-fail.vue'], resolve)
+			},
+			{
 				name: 'pay-success',
 				path: 'pay-success',
 				component: resolve => require(['views/pay-success.vue'], resolve)

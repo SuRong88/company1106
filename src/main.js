@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router/router";
 import store from "./store/store";
 import request from "./utils/request";
+// import '@/assets/js/resetRem';
 import formcheck from '@/assets/js/formcheck';
 import layout from '@/assets/js/layout';
 import errorCode from '@/assets/js/errorCode';
@@ -25,12 +26,18 @@ Vue.filter('formatDate', formatDate);
 // 未登录 所有允许进入的页面
 var allowPages = ['/index', '/login', '/register', '/register-success', '/bind', '/forget', '/reset', '/detail', '/404',
 	'/sale', '/case', '/adviser', '/purchase', '/company_purchase_info','/result','/openInBrowser', '/pay-success', '/pay-fail', '/tip', '/buy'
-];
+,'bind-fail','bind-success'];
 router.beforeEach((to, from, next) => {
 	var login = localStorage.getItem('company');
 	if (!login && allowPages.indexOf(to.path) < 0) {
 		next('/login');
 		return false;
+	}
+	// 百度统计,所有页面
+	if (_hmt) {
+	    if (to.path) {
+	      window._hmt.push(['_trackPageview', '/#' + to.fullPath])
+	    }
 	}
 	next();
 });

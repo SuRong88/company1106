@@ -309,9 +309,15 @@
 					this.area = res.data.know_area;
 					this.business_type = res.data.know_business_type;
 					this.industry_type = res.data.know_industry_type;
-					this.codeUrl = 'http://dz25.mrxdtech.com/api/api/wx_account/qrcode_img?kinds=change&language=cn&member_numbers=' +
+                    let language = localStorage.getItem('language')||'cn'
+                    if (window.screen.width > 750) {
+						this.codeUrl = 'http://www.gcsgou.com/api/api/wx_account/qrcode_img?kinds=change&device=pc&language='+language+'&member_numbers=' +
 						res.data.member_numbers
-					console.log(res.data);
+					} else{
+						this.codeUrl = 'http://www.gcsgou.com/api/api/wx_account/qrcode_img?kinds=change&device=mobile&language='+language+'&member_numbers=' +
+						res.data.member_numbers
+					}
+					
 					this.tags.forEach((item, index) => {
 						for (let i = 0; i < res.data.know_industry_type.length; i++) {
 							if (
