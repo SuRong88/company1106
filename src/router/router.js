@@ -190,7 +190,7 @@ export default new Router({
 			component: resolve => require(['views/open-in-browser.vue'], resolve)
 		},
 		{
-			name:'404',
+			name:'notFound',
 			path:'/404',
 			component: resolve => require(['views/404.vue'], resolve)
 		},

@@ -19,7 +19,7 @@ var lang = getQuery('lang')
 var langArr = ['cn','en']
 langArr.includes(lang)?localStorage.setItem('language',lang) : ''
 var language = localStorage.getItem('language') || 'cn'
-document.getElementsByTagName('html')[0].lang = ((language== 'en')?'en':'zh-cmn-Hans')
+document.getElementsByTagName('html')[0].lang = ((language== 'en')?'en':'zh-CN')
 export default new Vuex.Store({
 	state: {
 		language: language,

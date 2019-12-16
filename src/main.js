@@ -43,7 +43,7 @@ router.beforeEach((to, from, next) => {
 });
 // 移动端加载更多的时候 屏幕不回滚顶部的页面
 var noScrollTopPages1 = ['/purchase', '/result', '/case', '/me/collect', '/me/sale-list', '/me/order-manage', '/adviser']
-// pc屏幕不回滚顶部的页面(感滚动到指定位置)
+// pc屏幕不回滚顶部的页面(滚动到指定位置)
 var noScrollTopPages2 = ['/result','/purchase','/adviser','/case']
 router.afterEach((to, from) => {
 	// 页面不一样 直接滚回顶部
